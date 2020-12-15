@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Row, Container } from 'react-bootstrap'
+import { Card, Row } from 'react-bootstrap'
 
 const AboutScreen = () => {
     return (
@@ -14,8 +14,8 @@ const AboutScreen = () => {
                     </Card.Img>
                     <Card.Title className="pt-3 pr-3 px-3">Carlos Emmanuel Finos</Card.Title>
                     <Card.Text className="py-2 px-3">
-                        Hi! I'm the best boyfriend of las minitas de mis friends specially of @emilioguillen on instagram
-                </Card.Text>
+
+                    </Card.Text>
                 </Card>
             </Row>
         </>
