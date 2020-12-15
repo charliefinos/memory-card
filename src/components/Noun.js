@@ -1,14 +1,13 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Card } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 
 
-const Noun = ({ card, shuffle, handler, revolver }) => {
+const Noun = ({ card, handleGame }) => {
 
 
     return (
         <Card
-            onClick={handler}
+            onClick={handleGame.bind(this, card.name)}
             style={{ width: "12rem", height: "19rem" }}
             className='my-4 p-3 rounded'>
             <Card.Img variant='top' src={card.image} />

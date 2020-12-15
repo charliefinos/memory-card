@@ -5,7 +5,9 @@ import cards from '../cards'
 
 const HomeScreen = () => {
     const [randCards, setRandCards] = useState([cards])
+    const [cardArr, setCardArr] = useState([])
     const [count, setCount] = useState(0)
+    const [countHigh, setCountHigh] = useState(0)
 
     const rCard = cards
 
@@ -14,25 +16,66 @@ const HomeScreen = () => {
             const j = Math.floor(Math.random() * (i + 1));
             [rCard[i], rCard[j]] = [rCard[j], rCard[i]];
         }
-        console.log(rCard)
+        // console.log(rCard)
         setRandCards([rCard])
     }
 
-    const handler = () => {
+    // Main Game function
+
+    const handleGame = (cardName) => {
+        if (!cardArr.includes(cardName)) {
+            handleCard(cardName)
+            handleCounter();
+        } else {
+
+            if (count > countHigh) {
+                handleHighCount();
+            }
+            alert(`You Lose!\n Your Score is ${count}\n Your last highest score is ${countHigh}`)
+            restartCount();
+            handleResetCard()
+        }
         shuffle(rCard)
+
     }
+
+    const restartCount = () => {
+        setCount(0)
+    }
+
+    const handleHighCount = () => {
+        setCountHigh(count)
+    }
+
+    const handleCounter = () => {
+        setCount(count + 1)
+    }
+
+    const handleCard = (cardName) => {
+        setCardArr([...cardArr, cardName])
+        console.log(cardArr)
+    }
+
+    const handleResetCard = () => {
+        setCardArr([])
+    }
+
 
     useEffect(() => {
 
-    }, [rCard])
+    }, [randCards])
 
     return (
         <div>
+            <h1>Score: {count}</h1>
+            <h1>High Score: {countHigh}</h1>
+
             <Row>
                 {rCard.map((card) => {
                     return (
                         <Col key={card._id} >
-                            <Noun handler={handler} card={card} />
+
+                            <Noun handleGame={handleGame} card={card} />
                         </Col>
                     )
                 })}

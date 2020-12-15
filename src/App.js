@@ -6,8 +6,8 @@ import Footer from './components/Footer'
 import HomeScreen from './screens/HomeScreen'
 import AboutScreen from './screens/AboutScreen'
 
-//[o] random rendering of cards
-//[o] add count to the state
+//[x] random rendering of cards
+//[x] add count to the state
 //[o] start the round and when it finish:
 //      [o]display a modal
 //      [o]reset state and count
