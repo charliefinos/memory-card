@@ -16,7 +16,7 @@ const HomeScreen = () => {
             const j = Math.floor(Math.random() * (i + 1));
             [rCard[i], rCard[j]] = [rCard[j], rCard[i]];
         }
-        // console.log(rCard)
+        console.log(rCard)
         setRandCards([rCard])
     }
 
@@ -74,7 +74,6 @@ const HomeScreen = () => {
                 {rCard.map((card) => {
                     return (
                         <Col key={card._id} >
-
                             <Noun handleGame={handleGame} card={card} />
                         </Col>
                     )
@@ -85,3 +84,5 @@ const HomeScreen = () => {
 }
 
 export default HomeScreen
+
+

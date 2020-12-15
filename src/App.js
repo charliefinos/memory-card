@@ -18,8 +18,7 @@ function App() {
       <Header />
       <main className='py-2'>
         <Container>
-          <Route path='/' component={HomeScreen} exact />
-          <Route path='/about' component={AboutScreen} />
+          <HomeScreen />
         </Container>
       </main>
       <Footer />

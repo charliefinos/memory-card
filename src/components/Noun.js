@@ -3,8 +3,6 @@ import { Card } from 'react-bootstrap'
 
 
 const Noun = ({ card, handleGame }) => {
-
-
     return (
         <Card
             onClick={handleGame.bind(this, card.name)}
