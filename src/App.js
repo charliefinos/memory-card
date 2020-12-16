@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import HomeScreen from './screens/HomeScreen'
 import AboutScreen from './screens/AboutScreen'
+import NotFound from './screens/NotFoundScreen'
 
 //[x] random rendering of cards
 //[x] add count to the state
@@ -20,6 +21,7 @@ function App() {
         <Container>
           <Route path='/' component={HomeScreen} exact />
           <Route path='/about' component={AboutScreen} />
+          <Route path='*' component={NotFound} />
         </Container>
       </main>
       <Footer />
