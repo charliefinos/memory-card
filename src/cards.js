@@ -2,7 +2,7 @@ const cards = [
     {
         _id: '1',
         name: 'Banana',
-        image: '/images/banana.jpg',
+        image: 'public/images/banana.jpg',
         isClicked: false
     },
     {
