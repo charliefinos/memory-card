@@ -67,9 +67,11 @@ const HomeScreen = () => {
 
     return (
         <div>
-            <h1>Score: {count}</h1>
-            <h1>High Score: {countHigh}</h1>
-
+            <Col>
+                <h2>Scoreboard:</h2>
+                <p>Score: {count}</p>
+                <p>High Score: {countHigh}</p>
+            </Col>
             <Row>
                 {rCard.map((card) => {
                     return (

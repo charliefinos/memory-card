@@ -8,15 +8,14 @@ const Header = () => {
         <header>
             <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
                 <Container>
-                    <LinkContainer to='https://github.com/charlyfinos/'>
+                    <LinkContainer to='/'>
                         <Navbar.Brand>Memory Card Game</Navbar.Brand>
                     </LinkContainer>
                     <Navbar.Toggle aria-controls='basic-navbar-nav' />
                     <Navbar.Collapse>
                         <Nav className="ml-auto">
-                            <LinkContainer to='https://github.com/charlyfinos/'>
-                                <Nav.Link>Github</Nav.Link>
-                            </LinkContainer>
+
+                            <Nav.Link href='https://github.com/charlyfinos/'>Github</Nav.Link>
 
                             <LinkContainer to='https://github.com/charlyfinos/'>
                                 <Nav.Link>Portfolio</Nav.Link>
