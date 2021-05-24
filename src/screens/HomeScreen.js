@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Noun from '../components/Noun'
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Container } from 'react-bootstrap'
 import cards from '../cards'
 
 const HomeScreen = () => {
@@ -66,12 +66,22 @@ const HomeScreen = () => {
     }, [randCards])
 
     return (
-        <div>
-            <Col>
-                <h2>Scoreboard:</h2>
-                <p>Score: {count}</p>
-                <p>High Score: {countHigh}</p>
-            </Col>
+        <Container>
+            <Row>
+                <h1>Scoreboard:</h1>
+            </Row>
+
+            <Row>
+                <Col>
+                    <Row><h2>Score: </h2></Row>
+                    <Row><h2>High Score:</h2></Row>
+                </Col>
+
+                <Col>
+                    <Row><h2>{count}</h2></Row>
+                    <Row><h2>{countHigh}</h2></Row>
+                </Col>
+            </Row>
             <Row>
                 {rCard.map((card) => {
                     return (
@@ -81,7 +91,7 @@ const HomeScreen = () => {
                     )
                 })}
             </Row>
-        </div>
+        </Container>
     )
 }
 

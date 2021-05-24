@@ -15,15 +15,11 @@ const Header = () => {
                     <Navbar.Collapse>
                         <Nav className="ml-auto">
 
-                            <Nav.Link href='https://github.com/charlyfinos/'>Github</Nav.Link>
+                            <Nav.Link target="_blank" href='https://github.com/charlyfinos/'>Github</Nav.Link>
 
-                            <LinkContainer to='https://github.com/charlyfinos/'>
-                                <Nav.Link>Portfolio</Nav.Link>
-                            </LinkContainer>
-
-                            <LinkContainer to='/about'>
-                                <Nav.Link>About</Nav.Link>
-                            </LinkContainer>
+                            <Nav.Link target="_blank" href='https://github.com/charlyfinos/'>
+                                Portfolio
+                            </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
