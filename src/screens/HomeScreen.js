@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Noun from '../components/Noun'
-import { Row, Col, Container } from 'react-bootstrap'
+import { Row, Col, Container, Button } from 'react-bootstrap'
 import cards from '../cards'
 
 const HomeScreen = () => {
@@ -8,6 +8,7 @@ const HomeScreen = () => {
     const [cardArr, setCardArr] = useState([])
     const [count, setCount] = useState(0)
     const [countHigh, setCountHigh] = useState(0)
+    const [toggle, setToggle] = useState(false)
 
     const rCard = cards
 
@@ -60,6 +61,10 @@ const HomeScreen = () => {
         setCardArr([])
     }
 
+    const toggleHandler = () => {
+        setToggle(!toggle)
+    }
+
 
     useEffect(() => {
 
@@ -67,6 +72,19 @@ const HomeScreen = () => {
 
     return (
         <Container>
+            <Row>
+                <Button onClick={toggleHandler}>
+                    {toggle ? "Hide Rules" : "Show Rules"}
+                </Button>
+                {toggle &&
+                    <Col>
+                        <p>The rules are simple: </p>
+                        <p>- If you click a fruit two times you lose!</p>
+                        <p>- If you click on each fruit without repeating, you win!</p>
+                    </Col>
+                }
+
+            </Row>
             <Row>
                 <h1>Scoreboard:</h1>
             </Row>
